@@ -1,0 +1,41 @@
+{% liquid
+  render 'customer-page'
+  render 'css-variables'
+
+  render 'vite-tag' with 'customerPage.css'
+  render 'vite-tag' with 'customerPage.jsx'
+-%}
+
+
+{% schema %}
+  {
+    "name": "Customer Page",
+    "target": "section",
+    "settings": [
+      {
+        "label": "Text Colors",
+        "id": "text-color",
+        "type": "color",
+        "default": "#000"
+      }, {
+        "label": "Links Colors",
+        "id": "link-color",
+        "type": "color",
+        "default": "#000"
+      }, {
+        "label": "Button colors",
+        "id": "button-color",
+        "type": "color",
+        "default": "#000"
+      }, {
+        "label": "Button Text color",
+        "id": "button-text-color",
+        "type": "color",
+        "default": "#fff"
+      }
+    ],
+    "enabled_on": {
+      "templates": ["customers/account"]
+    }
+  }
+{% endschema %}
